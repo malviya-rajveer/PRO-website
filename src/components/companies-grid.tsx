@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { TextShimmer } from "./text-shimmer";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const logos = [
   {
@@ -47,7 +48,7 @@ export const CompaniesGrid = () => {
             "grid h-60 max-w-full grid-cols-4 divide-x divide-y border border-r-0 border-b-0",
           )}
         >
-          {logos.map((logo, className) => {
+          {logos.map((logo) => {
             return (
               <div
                 className="group relative flex items-center justify-center overflow-hidden"
@@ -71,10 +72,10 @@ export const CompaniesGrid = () => {
                   className="absolute h-full w-full"
                 >
                   <div>
-                    <img src={"/_.jpeg"}></img>
+                    <Image src={"/_.jpeg"} alt="" />
                   </div>
                 </motion.div>
-                <img
+                <Image
                   className={cn(
                     "absolute flex h-8 w-auto items-center justify-center dark:invert",
                     logo.className,

@@ -2,11 +2,6 @@
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 
-type Initial = {
-  x1: string;
-  x2: string;
-};
-
 export const StarLight = ({
   initialX,
   animateX,
@@ -21,7 +16,7 @@ export const StarLight = ({
   };
 }) => {
   const pink = ["#9E00FF", "#ef476f"];
-  const white = ["#9E00FF", "#f8fafc"];
+  // const white = ["#9E00FF", "#f8fafc"];
   const yellow = ["#9E00FF", "#ffd166"];
 
   const paths = [
