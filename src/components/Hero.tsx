@@ -6,19 +6,19 @@ export const Hero = () => {
   return (
     <div
       className={cn(
-        "relative m-auto flex h-150 flex-col items-center overflow-hidden",
+        "relative m-auto flex min-h-[85vh] flex-col items-center overflow-hidden",
       )}
     >
       <div
-        className="absolute inset-0 z-21 hidden blur-2xl dark:block"
+        className="absolute inset-0 z-21 blur-2xl dark:block"
         style={{
           maskImage:
             "linear-gradient(to bottom, transparent, black , transparent)",
           background:
-            "repeating-linear-gradient(63deg, var(--color-purple-500), var(--color-yellow-900) 12px, color-mix(in oklab, var(--color-violet-600) 30%, transparent) 20px, transparent 180px)",
+            "repeating-linear-gradient(63deg, var(--color-purple-400), var(--color-yellow-800) 12px, color-mix(in oklab, var(--color-violet-600) 30%, transparent) 20px, transparent 180px)",
         }}
       />
-      <div className="opacity-90 lg:scale-x-140 lg:scale-y-80">
+      <div className="scale-x-60 scale-y-60 opacity-90 xl:scale-x-140 xl:scale-y-80">
         <StarLight></StarLight>
       </div>
       <div className="absolute inset-0 h-60 bg-neutral-950 [mask-image:linear-gradient(to_top,black_10%,transparent_40%)]"></div>
@@ -39,15 +39,15 @@ export const Hero = () => {
         }}
         className="absolute z-30"
       >
-        <h1 className="mt-60 bg-gradient-to-t from-neutral-100 to-neutral-400 bg-clip-text text-center text-6xl tracking-tighter text-transparent">
-          We create Elagent Websites
+        <h1 className="mt-[27vh] bg-gradient-to-t from-neutral-100 to-neutral-400 bg-clip-text text-center text-[35px] tracking-tighter text-transparent sm:mt-[30vh] sm:text-[35px] md:text-[40px] lg:mt-45 xl:mt-[37vh] xl:pb-2 xl:text-5xl">
+          Crafting Elagent Websites
         </h1>
-        <p className="mt-2 ml-29 w-md text-center text-[20px] tracking-wide text-neutral-400">
-          We provide life to your websites giving them better designes and
-          interactives
+
+        <p className="mt-0 ml-10 w-55 text-center text-[13px] tracking-wide text-neutral-400 sm:mt-0 sm:ml-11 sm:w-69 sm:text-[15px] md:mt-0 md:ml-14 md:w-74 md:text-[16px] xl:mt-0 xl:ml-8 xl:w-md xl:text-[20px]">
+          We provide life to your websites giving them better designes
         </p>
       </motion.div>
-      <div className="absolute bottom-0 rotate-180 opacity-90 lg:scale-x-140 lg:scale-y-80">
+      <div className="absolute bottom-0 scale-x-60 scale-y-60 rotate-180 opacity-90 xl:scale-x-140 xl:scale-y-80">
         <StarLight
           animateX={{ x1: "", x2: "" }}
           initialX={{ x1: "", x2: "" }}

@@ -15,9 +15,9 @@ export const StarLight = ({
     x2: string;
   };
 }) => {
-  const pink = ["#9E00FF", "#ef476f"];
+  const pink = ["#9E00FF", "#fda4af"];
   // const white = ["#9E00FF", "#f8fafc"];
-  const yellow = ["#9E00FF", "#ffd166"];
+  const yellow = ["#9E00FF", "#fef08a"];
 
   const paths = [
     {
@@ -130,7 +130,7 @@ export const StarLight = ({
         viewBox="0 0 236 108"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="hidden md:block"
+        className=""
       >
         {paths.map((path, idx) => {
           return <path key={idx} d={path.d} strokeWidth={0.2}></path>;

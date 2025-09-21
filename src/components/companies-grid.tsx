@@ -20,6 +20,7 @@ const logos = [
   },
   {
     src: "./logo-5.png",
+    className: "h-5",
   },
   {
     src: "./logo-6.png",
@@ -37,7 +38,7 @@ export const CompaniesGrid = () => {
     <div className="border-t-border-neutral/60 mt-0 h-100 border border-x-0 border-b-0">
       <div className="flex flex-col">
         <TextShimmer
-          className="flex h-23 items-center justify-center font-mono text-xl uppercase"
+          className="md:text-md flex h-23 items-center justify-center font-mono text-sm uppercase xl:text-xl"
           duration={2.2}
         >
           Trusted by Fast Growing Startups
@@ -45,7 +46,9 @@ export const CompaniesGrid = () => {
         <div
           className={cn(
             "border-t-border-neutral/60 divide-border-neutral/60 border-l-border-neutral/60",
-            "grid h-60 max-w-full grid-cols-4 divide-x divide-y border border-r-0 border-b-0",
+            "grid h-100 max-w-full grid-cols-2",
+            "divide-x divide-y border border-r-0 border-b-0",
+            "sm:h-60 md:grid-cols-4",
           )}
         >
           {logos.map((logo) => {
@@ -71,17 +74,18 @@ export const CompaniesGrid = () => {
                   }}
                   className="absolute h-full w-full"
                 >
-                  <div>
-                    <Image src={"/_.jpeg"} alt="" />
+                  <div className="">
+                    <img src={"/_.jpeg"} alt="" />
                   </div>
                 </motion.div>
-                <Image
+
+                <img
                   className={cn(
-                    "absolute flex h-8 w-auto items-center justify-center dark:invert",
+                    "absolute flex h-8 w-auto items-center justify-center drop-shadow-2xl drop-shadow-neutral-50/40 invert hover:drop-shadow-2xl/0 dark:invert",
                     logo.className,
                   )}
                   src={logo.src}
-                  alt={logo.src}
+                  alt={""}
                 />
               </div>
             );
@@ -92,6 +96,3 @@ export const CompaniesGrid = () => {
     </div>
   );
 };
-{
-  /* <div className="group flex min-h-32 items-center justify-center p-4 py-10 grayscale" style="opacity: 1; transform: none;"><img alt="Second" className="object-contain transition-all duration-500 dark:invert dark:filter h-6 w-auto" src="/logos/2.png"></div>  */
-}

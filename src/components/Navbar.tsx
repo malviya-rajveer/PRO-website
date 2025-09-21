@@ -1,7 +1,11 @@
+"use client";
 import { cn } from "@/lib/utils";
+import { IconMenu2 } from "@tabler/icons-react";
 import Link from "next/link";
+import { useState } from "react";
 
 export const Navbar = () => {
+  const [open, setOpen] = useState(false);
   const links = [
     {
       Name: "Home",
@@ -21,9 +25,14 @@ export const Navbar = () => {
     },
   ];
   return (
-    <nav className="fixed z-50 flex h-15 w-screen items-center justify-around border-b border-neutral-700/60 backdrop-blur-2xl">
-      <div className="relative ml-3 flex items-center gap-5">
-        <div className="absolute -left-13 stroke-neutral-200">
+    <nav className="fixed z-50 flex h-15 w-screen items-center justify-between border-b border-neutral-700/60 backdrop-blur-2xl">
+      <div
+        className={cn(
+          "relative flex items-center gap-4 xl:gap-1",
+          "sm:ml-0 md:ml-8 lg:ml-27 xl:ml-37",
+        )}
+      >
+        <div className="flex items-center justify-center stroke-neutral-200 pb-0.5">
           <svg height={50} width={50} viewBox="0 0 15 20">
             <circle
               r={4.5}
@@ -45,9 +54,9 @@ export const Navbar = () => {
               </linearGradient>
             </defs>
           </svg>
+          <div className="text-neutral-50">Shia Devs</div>
         </div>
-        <div className="text-neutral-50">Shia Devs</div>
-        <div className="flex gap-4 pl-5 font-extralight text-neutral-100/70">
+        <div className="hidden font-extralight text-neutral-100/70 lg:flex lg:gap-4 xl:pl-5">
           {links.map((link, idx) => {
             return (
               <Link
@@ -61,11 +70,16 @@ export const Navbar = () => {
           })}
         </div>
       </div>
-      <div className="relative left-1 flex items-center justify-center gap-3 pl-10">
+      <div
+        className={cn(
+          "relative flex items-center justify-center gap-1.5 pl-10 sm:left-2.5 sm:gap-3",
+          "md:mr-015 sm:mr-15 lg:mr-33 xl:mr-46",
+        )}
+      >
         <div>
           <button
             className={cn(
-              "flex h-9 w-49 items-center justify-between gap-1 rounded-full",
+              "flex h-9 w-30 items-center justify-between gap-1 rounded-full sm:w-49",
               "border border-neutral-600 bg-neutral-900/40 p-3 ps-2 text-neutral-400 inset-shadow-sm inset-shadow-neutral-800/95",
             )}
           >
@@ -87,7 +101,7 @@ export const Navbar = () => {
               </svg>
               search
             </div>
-            <div className="flex items-center gap-1">
+            <div className="hidden items-center gap-1 sm:flex">
               <kbd className="bg-700 flex h-6 items-center rounded-md border border-neutral-900 px-1.5 pt-1 text-[20px]">
                 ⌘
               </kbd>
@@ -97,7 +111,7 @@ export const Navbar = () => {
             </div>
           </button>
         </div>
-        <div>
+        <div className="hidden sm:flex">
           <svg
             className="size-6"
             role="img"
@@ -107,6 +121,26 @@ export const Navbar = () => {
             <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
           </svg>
         </div>
+        <button
+          onClick={() => setOpen(!open)}
+          className="mr-3 sm:mr-0 lg:hidden"
+        >
+          <IconMenu2></IconMenu2>
+        </button>
+
+        {open && (
+          <div className="absolute top-13 left-10 h-50 w-45 rounded-2xl bg-neutral-900 text-neutral-200 md:left-30 md:w-50 lg:hidden">
+            {links.map((link, idx) => {
+              return (
+                <div key={idx} className="mt-5 flex flex-col items-center">
+                  <Link className="" key={idx} href={link}>
+                    {link.Name}
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </nav>
   );
@@ -128,29 +162,4 @@ export const Navbar = () => {
   <circle cx="100" cy="100" r="80" fill="url(#grad1)" />
 </svg>;
 
-// <button
-//   type="button"
-//   data-search-full=""
-//   class="bg-fd-secondary/50 text-fd-muted-foreground hover:bg-fd-accent hover:text-fd-accent-foreground inline-flex w-full max-w-[240px] items-center gap-2 rounded-full border p-1.5 ps-2.5 text-sm transition-colors"
-// >
-//   <svg
-//     xmlns="http://www.w3.org/2000/svg"
-//     width="24"
-//     height="24"
-//     viewBox="0 0 24 24"
-//     fill="none"
-//     stroke="currentColor"
-//     stroke-width="2"
-//     stroke-linecap="round"
-//     stroke-linejoin="round"
-//     class="lucide size-4"
-//   >
-//     <circle cx="11" cy="11" r="8"></circle>
-//     <path d="m21 21-4.3-4.3"></path>
-//   </svg>
-//   Search
-//   <div class="ms-auto inline-flex gap-0.5">
-//     <kbd class="bg-fd-background rounded-md border px-1.5">⌘</kbd>
-//     <kbd class="bg-fd-background rounded-md border px-1.5">K</kbd>
-//   </div>
-// </button>;
+// sm:ml-37 md:ml-37 lg:ml-37 xl:ml-37
