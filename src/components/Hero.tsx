@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <div
       className={cn(
-        "relative m-auto flex min-h-[85vh] flex-col items-center overflow-hidden",
+        "relative m-auto flex min-h-[90vh] flex-col items-center overflow-hidden",
       )}
     >
       <div
@@ -39,11 +39,11 @@ export const Hero = () => {
         }}
         className="absolute z-30"
       >
-        <h1 className="mt-[27vh] bg-gradient-to-t from-neutral-100 to-neutral-400 bg-clip-text text-center text-[35px] tracking-tighter text-transparent sm:mt-[30vh] sm:text-[35px] md:text-[40px] lg:mt-45 xl:mt-[37vh] xl:pb-2 xl:text-5xl">
+        <h1 className="mt-[27vh] bg-gradient-to-t from-neutral-100 to-neutral-400 bg-clip-text text-center text-[35px] tracking-tighter text-transparent sm:mt-[30vh] sm:text-[35px] md:mt-[35vh] md:text-[40px] xl:mt-[37vh] xl:pb-2 xl:text-5xl">
           Crafting Elagent Websites
         </h1>
 
-        <p className="mt-0 ml-10 w-55 text-center text-[13px] tracking-wide text-neutral-400 sm:mt-0 sm:ml-11 sm:w-69 sm:text-[15px] md:mt-0 md:ml-14 md:w-74 md:text-[16px] xl:mt-0 xl:ml-8 xl:w-md xl:text-[20px]">
+        <p className="mt-0 ml-15 w-55 text-center text-[13px] tracking-wide text-neutral-400 sm:mt-0 sm:ml-11 sm:w-69 sm:text-[15px] md:mt-0 md:ml-14 md:w-74 md:text-[16px] xl:mt-0 xl:ml-8 xl:w-md xl:text-[20px]">
           We provide life to your websites giving them better designes
         </p>
       </motion.div>
