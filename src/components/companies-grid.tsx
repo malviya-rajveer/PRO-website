@@ -35,7 +35,7 @@ const logos = [
 ];
 export const CompaniesGrid = () => {
   return (
-    <div className="border-t-border-neutral/60 mt-0 h-100 border border-x-0 border-b-0">
+    <div className="border-t-border-neutral/60 mt-0 h-screen border border-x-0 border-b-0">
       <div className="flex flex-col">
         <TextShimmer
           className="md:text-md flex h-23 items-center justify-center font-mono text-sm uppercase xl:text-xl"
@@ -92,6 +92,7 @@ export const CompaniesGrid = () => {
           })}
           <div className="hidden"></div>
         </div>
+        <div className="h-60 w-full bg-red-100"></div>
       </div>
     </div>
   );

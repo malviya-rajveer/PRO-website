@@ -29,7 +29,7 @@ export const Navbar = () => {
       <div
         className={cn(
           "relative flex items-center gap-4 xl:gap-1",
-          "sm:ml-0 md:ml-8 lg:ml-27 xl:ml-37",
+          "sm:ml-0 md:ml-8 lg:ml-27 xl:ml-36",
         )}
       >
         <div className="flex items-center justify-center stroke-neutral-200 pb-0.5">
@@ -73,7 +73,7 @@ export const Navbar = () => {
       <div
         className={cn(
           "relative flex items-center justify-center gap-1.5 pl-10 sm:left-2.5 sm:gap-3",
-          "md:mr-015 sm:mr-15 lg:mr-33 xl:mr-46",
+          "md:mr-015 sm:mr-15 lg:mr-33 xl:mr-47",
         )}
       >
         <div>
