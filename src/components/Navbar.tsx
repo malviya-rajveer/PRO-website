@@ -9,19 +9,19 @@ export const Navbar = () => {
   const links = [
     {
       Name: "Home",
-      href: "https://google.com",
+      href: "",
     },
     {
       Name: "Tabs",
-      href: "https://google.com",
+      href: "",
     },
     {
       Name: "Docs",
-      href: "https://google.com",
+      href: "",
     },
     {
       Name: "Careers",
-      href: "https://google.com",
+      href: "",
     },
   ];
   return (
@@ -29,7 +29,7 @@ export const Navbar = () => {
       <div className="mx-auto flex h-full min-w-full items-center justify-between md:min-w-2xl lg:min-w-3xl xl:min-w-5xl">
         <div
           className={cn(
-            "relative right-2 flex items-center justify-center gap-4 sm:right-7 xl:gap-1",
+            "relative right-2 flex items-center justify-center gap-4 sm:right-5.5 xl:gap-1",
           )}
         >
           <div className="flex items-center stroke-neutral-200">
@@ -76,7 +76,7 @@ export const Navbar = () => {
         </div>
         <div
           className={cn(
-            "relative right-2 flex items-center justify-center gap-1.5 sm:right-2 sm:gap-3",
+            "relative right-2 flex items-center justify-center gap-1.5 sm:right-0 sm:gap-3",
           )}
         >
           <div className="">
@@ -129,7 +129,7 @@ export const Navbar = () => {
           </button>
 
           {open && (
-            <div className="absolute top-13 left-10 h-50 w-45 rounded-2xl bg-neutral-900 text-neutral-200 md:left-30 md:w-50 lg:hidden">
+            <div className="absolute top-13 right-2 h-50 w-45 rounded-2xl bg-neutral-900 text-neutral-200 md:w-50 lg:hidden">
               {links.map((link, idx) => {
                 return (
                   <div key={idx} className="mt-5 flex flex-col items-center">
