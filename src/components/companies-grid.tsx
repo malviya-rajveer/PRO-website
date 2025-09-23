@@ -54,7 +54,7 @@ export const CompaniesGrid = () => {
           {logos.map((logo) => {
             return (
               <div
-                className="group relative flex items-center justify-center overflow-hidden"
+                className="group group relative flex items-center justify-center overflow-hidden"
                 key={logo.src}
               >
                 <motion.div
@@ -65,7 +65,7 @@ export const CompaniesGrid = () => {
                   }}
                   whileHover={{
                     y: -10,
-                    opacity: 0.8,
+                    opacity: 0.6,
                     filter: "blur(1px)",
                   }}
                   transition={{
@@ -81,7 +81,7 @@ export const CompaniesGrid = () => {
 
                 <img
                   className={cn(
-                    "absolute flex h-8 w-auto items-center justify-center drop-shadow-2xl drop-shadow-neutral-50/40 invert hover:drop-shadow-2xl/0 dark:invert",
+                    "absolute z-10 flex h-8 w-auto items-center justify-center drop-shadow-2xl drop-shadow-neutral-50 invert dark:invert",
                     logo.className,
                   )}
                   src={logo.src}
