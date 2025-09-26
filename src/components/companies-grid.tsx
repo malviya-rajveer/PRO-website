@@ -35,14 +35,11 @@ const logos = [
 ];
 export const CompaniesGrid = () => {
   return (
-    <div className="border-t-border-neutral/60 mt-0 h-screen border border-x-0 border-b-0">
+    <div className="border-t-border-neutral/60 mt-0 h-[51vh] border border-x-0 border-b-0">
       <div className="flex flex-col">
-        <TextShimmer
-          className="md:text-md flex h-23 items-center justify-center font-mono text-sm uppercase xl:text-xl"
-          duration={2.2}
-        >
+        <div className="md:text-md flex h-23 items-center justify-center font-sans text-sm uppercase">
           Trusted by Fast Growing Startups
-        </TextShimmer>
+        </div>
         <div
           className={cn(
             "border-t-border-neutral/60 divide-border-neutral/60 border-l-border-neutral/60",
@@ -65,7 +62,7 @@ export const CompaniesGrid = () => {
                   }}
                   whileHover={{
                     y: -10,
-                    opacity: 0.6,
+                    opacity: 0.5,
                     filter: "blur(1px)",
                   }}
                   transition={{
@@ -81,7 +78,7 @@ export const CompaniesGrid = () => {
 
                 <img
                   className={cn(
-                    "absolute z-10 flex h-8 w-auto items-center justify-center drop-shadow-2xl drop-shadow-neutral-50 invert dark:invert",
+                    "absolute z-10 flex h-8 w-auto items-center justify-center drop-shadow-2xl drop-shadow-neutral-400 invert dark:invert",
                     logo.className,
                   )}
                   src={logo.src}
@@ -92,7 +89,6 @@ export const CompaniesGrid = () => {
           })}
           <div className="hidden"></div>
         </div>
-        <div className="h-60 w-full bg-red-100"></div>
       </div>
     </div>
   );

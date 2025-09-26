@@ -29,7 +29,7 @@ export const Navbar = () => {
       <div className="mx-auto flex h-full min-w-full items-center justify-between md:min-w-2xl lg:min-w-3xl xl:min-w-5xl">
         <div
           className={cn(
-            "relative right-2 flex items-center justify-center gap-4 sm:right-5.5 xl:gap-1",
+            "relative right-2 flex items-center justify-center gap-4 sm:right-7 xl:gap-1",
           )}
         >
           <div className="flex items-center stroke-neutral-200">
@@ -39,7 +39,7 @@ export const Navbar = () => {
                 cy={10}
                 cx={10}
                 fill="url(#logo_id)"
-                strokeWidth={0.7}
+                strokeWidth={0.6}
                 stroke="current color"
               ></circle>
               <defs>
@@ -76,7 +76,7 @@ export const Navbar = () => {
         </div>
         <div
           className={cn(
-            "relative right-2 flex items-center justify-center gap-1.5 sm:right-0 sm:gap-3",
+            "relative right-2 flex items-center justify-center gap-1.5 sm:right-2 sm:gap-3",
           )}
         >
           <div className="">
@@ -84,6 +84,7 @@ export const Navbar = () => {
               className={cn(
                 "flex h-9 w-30 items-center justify-between gap-1 rounded-full sm:w-49",
                 "border border-neutral-600 bg-neutral-900/40 p-3 ps-2 text-neutral-400 inset-shadow-sm inset-shadow-neutral-800/95",
+                "cursor-pointer",
               )}
             >
               <div className="flex items-center justify-center gap-0.5">
