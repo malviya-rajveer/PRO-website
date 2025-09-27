@@ -2,10 +2,30 @@
 import { cn } from "@/lib/utils";
 import { IconMenu2 } from "@tabler/icons-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import { ref } from "vue";
+
+const useOutsideClick = (callback: () => void) => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        callback();
+      }
+    };
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, [callback]);
+  return ref;
+};
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [openwindow, setOpenWindow] = useState(false);
+  const ref = useOutsideClick(() => setOpenWindow(false));
   const links = [
     {
       Name: "Home",
@@ -25,7 +45,24 @@ export const Navbar = () => {
     },
   ];
   return (
-    <nav className="fixed z-50 mx-auto flex h-15 min-w-screen border-b border-neutral-700/60 backdrop-blur-2xl min-[320px]:w-85 sm:w-screen">
+    <nav className="fixed z-40 mx-auto flex h-15 min-w-screen border-b border-neutral-700/60 backdrop-blur-2xl min-[320px]:w-85 sm:w-screen">
+      {openwindow && (
+        <div
+          className="absolute inset-0 z-10 flex h-screen w-screen items-center justify-center bg-black/50"
+          style={{
+            backdropFilter: "blur(40px)",
+            backgroundColor: "rgba(255, 255, 255, 0.3)", // for transparency
+            padding: "1.5rem",
+            borderRadius: "1rem",
+          }}
+        >
+          <div
+            ref={ref}
+            className="flex h-[40vh] w-70 rounded-2xl bg-neutral-500"
+          ></div>
+        </div>
+      )}
+
       <div className="mx-auto flex h-full min-w-full items-center justify-between md:min-w-2xl lg:min-w-3xl xl:min-w-5xl">
         <div
           className={cn(
@@ -81,6 +118,9 @@ export const Navbar = () => {
         >
           <div className="">
             <button
+              onClick={() => {
+                setOpenWindow(true);
+              }}
               className={cn(
                 "flex h-9 w-30 items-center justify-between gap-1 rounded-full sm:w-49",
                 "border border-neutral-600 bg-neutral-900/40 p-3 ps-2 text-neutral-400 inset-shadow-sm inset-shadow-neutral-800/95",

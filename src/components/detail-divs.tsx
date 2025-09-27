@@ -7,17 +7,17 @@ export const Detailsection = () => {
     <div className="flex w-full flex-col">
       <div
         className={cn(
-          "border-b-border-neutral/70 relative flex h-80 w-full flex-col items-center justify-center border border-x-0 border-t-0",
-          "text-center text-2xl",
+          "border-b-border-neutral/70 border-t-border-neutral/70 relative flex h-80 w-full flex-col items-center justify-center border border-x-0",
+          "overflow-hidden text-center text-2xl",
         )}
       >
         <TextShimmer
           duration={2}
-          className="pb-2 text-[16px] dark:[--base-color:var(--color-purple-300)] dark:[--base-gradient-color:var(--color-white)]"
+          className="pb-2 text-[12px] sm:text-[16px] dark:[--base-color:var(--color-purple-300)] dark:[--base-gradient-color:var(--color-white)]"
         >
           Exquisite designes
         </TextShimmer>
-        <p className="max-w-150 text-center text-xl">
+        <p className="max-w-75 text-center text-xs sm:max-w-150 sm:text-xl">
           From clean aesthetics to seamless user experiences, we craft websites
           that not only look stunning but also perform flawlessly
         </p>

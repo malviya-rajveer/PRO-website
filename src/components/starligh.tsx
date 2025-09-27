@@ -15,7 +15,7 @@ export const StarLight = ({
     x2: string;
   };
 }) => {
-  const pink = ["#9E00FF", "#e879f9"];
+  const pink = ["oklch(0.586 0.253 17.585)", "oklch(0.833 0.145 321.434)"];
   // const white = ["#9E00FF", "#f8fafc"];
   const yellow = ["#9E00FF", "#fef08a"];
 

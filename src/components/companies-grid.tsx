@@ -37,9 +37,9 @@ export const CompaniesGrid = () => {
   return (
     <div className="border-t-border-neutral/60 mt-0 h-[51vh] border border-x-0 border-b-0">
       <div className="flex flex-col">
-        <div className="md:text-md flex h-23 items-center justify-center font-sans text-sm uppercase">
+        <TextShimmer className="md:text-md text-md flex h-23 items-center justify-center dark:[--base-color:var(--color-purple-300)] dark:[--base-gradient-color:var(--color-white)]">
           Trusted by Fast Growing Startups
-        </div>
+        </TextShimmer>
         <div
           className={cn(
             "border-t-border-neutral/60 divide-border-neutral/60 border-l-border-neutral/60",
@@ -71,9 +71,9 @@ export const CompaniesGrid = () => {
                   }}
                   className="absolute h-full w-full"
                 >
-                  <div className="">
+                  {/* <div className="">
                     <img src={"/_.jpeg"} alt="" />
-                  </div>
+                  </div> */}
                 </motion.div>
 
                 <img
