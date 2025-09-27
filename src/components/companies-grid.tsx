@@ -37,7 +37,10 @@ export const CompaniesGrid = () => {
   return (
     <div className="border-t-border-neutral/60 mt-0 h-[51vh] border border-x-0 border-b-0">
       <div className="flex flex-col">
-        <TextShimmer className="md:text-md text-md flex h-23 items-center justify-center dark:[--base-color:var(--color-purple-300)] dark:[--base-gradient-color:var(--color-white)]">
+        <TextShimmer
+          duration={5}
+          className="md:text-md text-md flex h-23 items-center justify-center dark:[--base-color:var(--color-purple-300)] dark:[--base-gradient-color:var(--color-white)]"
+        >
           Trusted by Fast Growing Startups
         </TextShimmer>
         <div

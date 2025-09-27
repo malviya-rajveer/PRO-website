@@ -39,19 +39,20 @@ export const Hero = () => {
         }}
         className="absolute z-30 flex flex-col"
       >
-        <h1 className="mt-[27vh] bg-gradient-to-t from-neutral-100 to-neutral-400 bg-clip-text text-center text-[35px] tracking-tighter text-transparent sm:mt-[30vh] sm:text-[35px] md:mt-[35vh] md:text-[40px] xl:mt-[37vh] xl:pb-2 xl:text-5xl">
+        <h1 className="mt-[27vh] bg-gradient-to-t from-neutral-50 to-neutral-400 bg-clip-text text-center text-[35px] tracking-tighter text-transparent sm:mt-[30vh] sm:text-[35px] md:mt-[35vh] md:text-[40px] xl:mt-[34vh] xl:pb-2 xl:text-5xl">
           Crafting Elagent Websites
         </h1>
 
-        <p className="mt-0 ml-15 w-55 text-center text-[13px] tracking-wide text-neutral-400 sm:mt-0 sm:ml-11 sm:w-69 sm:text-[15px] md:mt-0 md:ml-14 md:w-74 md:text-[16px] xl:mt-0 xl:ml-8 xl:w-md xl:text-[20px]">
-          We provide life to your websites giving them better designes
+        <p className="mt-0 ml-15 w-55 text-center text-[13px] tracking-wide text-neutral-400 sm:mt-0 sm:ml-11 sm:w-69 sm:text-[15px] md:mt-0 md:ml-14 md:w-74 md:text-[16px] xl:mt-1.5 xl:ml-8 xl:w-md xl:text-[19px]">
+          We provide life to your websites giving them better designes and
+          interactives
         </p>
 
-        <div className="mt-4 flex items-center justify-center gap-8">
-          <button className="inset-shadow-2xl cursor-pointer rounded-full bg-gradient-to-b from-white to-neutral-400 px-6 py-2.5 text-neutral-900 hover:from-neutral-100 hover:to-neutral-100">
+        <div className="mt-5 flex items-center justify-center gap-5 lg:gap-8">
+          <button className="inset-shadow-2xl cursor-pointer rounded-full bg-gradient-to-b from-white to-neutral-400 px-4 py-1.5 text-neutral-900 hover:from-neutral-100 hover:to-neutral-100 lg:px-6 lg:py-2.5">
             Contect us
           </button>
-          <button className="font cursor-pointer rounded-full bg-gradient-to-b from-neutral-800 to-neutral-950 px-5 py-2.5 shadow-2xl hover:ring-1 hover:ring-neutral-600">
+          <button className="font cursor-pointer rounded-full bg-gradient-to-b from-neutral-800 to-neutral-950 px-4 py-1.5 shadow-2xl hover:ring-1 hover:ring-neutral-600 lg:px-5 lg:py-2.5">
             Start building
           </button>
         </div>
