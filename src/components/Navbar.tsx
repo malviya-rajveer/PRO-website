@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import { IconMenu2 } from "@tabler/icons-react";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
-import { ref } from "vue";
 
 const useOutsideClick = (callback: () => void) => {
   const ref = useRef<HTMLDivElement>(null);

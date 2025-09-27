@@ -1,7 +1,7 @@
 import { AnimatedGrid } from "./AppleGrid";
 import { CompaniesGrid } from "./companies-grid";
 import { Detailsection } from "./detail-divs";
-import { Footer } from "./footer";
+
 import { Hero } from "./Hero";
 
 export const Container = () => {
